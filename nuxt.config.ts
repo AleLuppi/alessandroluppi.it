@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     // guarantees crawlers and AI agents receive fully-formed markup.
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/it', '/play', '/it/play'],
+      routes: ['/', '/it', '/play', '/it/play', '/llms.txt'],
       failOnError: true,
     },
   },
@@ -88,11 +88,29 @@ export default defineNuxtConfig({
   },
 
   robots: {
-    // AI crawlers are deliberately welcome: this site is meant to be
-    // discoverable by agentic search, not just by classic search engines.
+    // AI crawlers are deliberately welcome: this site is meant to be found
+    // and cited by agentic search, not only by classic search engines. The
+    // named group is redundant against the wildcard on purpose - it states
+    // the intent explicitly, so nobody has to guess whether the omission was
+    // deliberate.
     blockAiBots: false,
     groups: [
       { userAgent: ['*'], allow: ['/'] },
+      {
+        userAgent: [
+          'GPTBot',
+          'OAI-SearchBot',
+          'ChatGPT-User',
+          'ClaudeBot',
+          'Claude-User',
+          'Claude-SearchBot',
+          'PerplexityBot',
+          'Perplexity-User',
+          'Google-Extended',
+          'Applebot-Extended',
+        ],
+        allow: ['/'],
+      },
     ],
   },
 
