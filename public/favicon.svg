@@ -1,0 +1,14 @@
+<!-- One activated node on a dark tile: the smallest piece of the site's
+     flow-field motif that still reads at 16px. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6ba4ff"/>
+      <stop offset="100%" stop-color="#9d7bff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0b0d13"/>
+  <path d="M4 20h14M46 44h14" stroke="#2f3d5c" stroke-width="5" stroke-linecap="round"/>
+  <path d="M18 20c12 0 16 24 28 24" fill="none" stroke="url(#s)" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="10" fill="url(#s)"/>
+</svg>

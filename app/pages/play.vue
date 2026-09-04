@@ -3,6 +3,13 @@
  * The easter-egg route, reached from the bottom of the landing page.
  */
 const { t } = useI18n()
+
+useSeoMeta({
+  title: () => t('game.metaTitle'),
+  description: () => t('game.metaDescription'),
+  ogTitle: () => t('game.metaTitle'),
+  ogDescription: () => t('game.metaDescription'),
+})
 </script>
 
 <template>

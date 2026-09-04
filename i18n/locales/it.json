@@ -124,6 +124,8 @@
       "caption": "La tua previsione, assemblata.",
       "score": "{score} token su {total} indovinati.",
       "body": "Hai appena fatto quello che fa un modello: cinque ipotesi a partire da un prior e da una sensazione. Che è poi il modo in cui è stata scritta tutta questa pagina — un agente che prevede il token successivo, e una persona che decide quali previsioni tenere."
-    }
+    },
+    "metaTitle": "Gioca — Alessandro Luppi",
+    "metaDescription": "Un piccolo gioco in cui fai tu il modello linguistico e prevedi cosa viene dopo, scoprendo qualcosa su Alessandro Luppi lungo la strada."
   }
 }

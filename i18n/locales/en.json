@@ -124,6 +124,8 @@
       "caption": "Your prediction, assembled.",
       "score": "{score} of {total} tokens matched.",
       "body": "You just did what a model does: five guesses from a prior and a vibe. Which is roughly how this whole page got written — an agent predicting the next token, and a human deciding which predictions to keep."
-    }
+    },
+    "metaTitle": "Play — Alessandro Luppi",
+    "metaDescription": "A short game where you play the language model and predict what comes next, and find out a little about Alessandro Luppi along the way."
   }
 }

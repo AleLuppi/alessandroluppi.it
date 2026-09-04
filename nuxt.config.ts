@@ -97,8 +97,19 @@ export default defineNuxtConfig({
   },
 
   schemaOrg: {
-    // Identity graph is defined once in app.vue and inherited by every route.
-    identity: 'Person',
+    // Declared once here and inherited by every route, so search engines and
+    // AI agents get an unambiguous, machine-readable answer to "who is this
+    // site about" without having to infer it from the prose.
+    identity: {
+      type: 'Person',
+      name: 'Alessandro Luppi',
+      jobTitle: 'Software and AI engineer',
+      url: 'https://alessandroluppi.it',
+      sameAs: [
+        'https://www.linkedin.com/in/alessandro-luppi/',
+        'https://github.com/AleLuppi',
+      ],
+    },
   },
 
   sitemap: {

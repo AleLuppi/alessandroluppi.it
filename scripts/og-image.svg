@@ -1,0 +1,71 @@
+<!--
+  Source for the Open Graph card at public/og.png.
+
+  The rendered PNG is committed, so no build or deploy ever regenerates it
+  and the project carries no rasteriser dependency. To update the card, edit
+  this file and re-render it at 1200x630 with any SVG rasteriser, for example:
+
+    pnpm dlx @resvg/resvg-js  # or any tool that honours the viewBox
+
+  See README.md for the exact snippet used to produce the committed PNG.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4c8dff"/>
+      <stop offset="100%" stop-color="#9d7bff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.12" r="0.75">
+      <stop offset="0%" stop-color="#16233d"/>
+      <stop offset="100%" stop-color="#07080b"/>
+    </radialGradient>
+    <style>
+      .name {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 86px;
+        font-weight: 600;
+        letter-spacing: -3.5px;
+        fill: #f2f4f8;
+      }
+      .role {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 38px;
+        font-weight: 400;
+        letter-spacing: -0.6px;
+        fill: #9aa2b1;
+      }
+      .url {
+        font-family: "SF Mono", Menlo, Consolas, monospace;
+        font-size: 24px;
+        letter-spacing: 3px;
+        fill: #6b7382;
+      }
+      .edge { fill: none; stroke: #2a3550; stroke-width: 2; }
+      .edge--live { fill: none; stroke: url(#signal); stroke-width: 3.5; stroke-linecap: round; }
+      .node { fill: #4c8dff; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- A quiet echo of the flow field on the site itself -->
+  <g opacity="0.9">
+    <path class="edge" d="M868 150C978 150 1000 232 1092 232"/>
+    <path class="edge" d="M868 150C978 150 1010 398 1092 398"/>
+    <path class="edge" d="M868 315C978 315 1000 232 1092 232"/>
+    <path class="edge" d="M868 315C978 315 1010 398 1092 398"/>
+    <path class="edge" d="M868 480C978 480 1010 398 1092 398"/>
+    <path class="edge--live" d="M868 315C978 315 1000 232 1092 232"/>
+    <path class="edge--live" d="M868 480C978 480 1010 398 1092 398"/>
+    <circle class="node" cx="868" cy="150" r="8"/>
+    <circle class="node" cx="868" cy="315" r="8"/>
+    <circle class="node" cx="868" cy="480" r="8"/>
+    <circle class="node" cx="1092" cy="232" r="8"/>
+    <circle class="node" cx="1092" cy="398" r="8"/>
+  </g>
+
+  <rect x="90" y="238" width="72" height="6" rx="3" fill="url(#signal)"/>
+  <text class="name" x="90" y="330">Alessandro Luppi</text>
+  <text class="role" x="90" y="392">Software and AI engineer</text>
+  <text class="url" x="90" y="520">ALESSANDROLUPPI.IT</text>
+</svg>
