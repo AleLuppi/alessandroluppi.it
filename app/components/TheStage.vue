@@ -167,6 +167,20 @@ const { track, pin, isCinematic } = useScrollStage({
   margin-inline: auto;
 }
 
+.scene {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+
+.scene__laptop {
+  order: 1;
+}
+
+.scene__watch {
+  order: 2;
+}
+
 .hero__title {
   max-width: 14ch;
   font-size: var(--fs-display);
@@ -195,7 +209,9 @@ const { track, pin, isCinematic } = useScrollStage({
 
 .laptop__lid {
   position: relative;
+  width: 94%;
   aspect-ratio: 16 / 10;
+  margin-inline: auto;
   border-radius: var(--r-lg);
 }
 
@@ -229,7 +245,7 @@ const { track, pin, isCinematic } = useScrollStage({
 }
 
 .laptop__base {
-  width: 106%;
+  width: 100%;
   height: clamp(9px, 1.1vw, 16px);
   margin-inline: auto;
   border-radius: 0 0 var(--r-md) var(--r-md);
@@ -250,8 +266,6 @@ const { track, pin, isCinematic } = useScrollStage({
 
 .scene__watch {
   --watch-unit: clamp(11px, 2.4vh, 24px);
-
-  margin-top: var(--sp-8);
 }
 
 /* --- Copy --------------------------------------------------------------- */
@@ -331,6 +345,7 @@ const { track, pin, isCinematic } = useScrollStage({
 
 .stage--cinematic .scene {
   z-index: 1;
+  display: block;
   inset: 0;
 }
 
@@ -342,8 +357,13 @@ const { track, pin, isCinematic } = useScrollStage({
 }
 
 .stage--cinematic .laptop__lid {
+  /* The static rule insets the lid so the base can overhang it. Here the lid
+     must span the whole pin, because the fold's clip insets are measured
+     against the pin's box. */
   position: absolute;
+  width: auto;
   aspect-ratio: auto;
+  margin: 0;
   inset: 0;
   rotate: x calc(var(--p-close, 0) * 82deg);
   transform-origin: 50% calc(var(--screen-y) + var(--screen-h));
