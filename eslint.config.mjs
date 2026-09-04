@@ -7,12 +7,10 @@ export default withNuxt({
     // like `TheStage` are unambiguous here.
     'vue/multi-word-component-names': 'off',
 
-    // One attribute per line is unreadable for the many tiny SVG elements
-    // this site draws. Short tags stay inline; anything already wrapped keeps
-    // the strict one-per-line treatment.
-    'vue/max-attributes-per-line': ['warn', {
-      singleline: { max: 4 },
-      multiline: { max: 1 },
-    }],
+    // This site draws its devices and its game character as inline SVG, and
+    // SVG shapes carry a lot of short geometry attributes. Forcing them onto
+    // separate lines turns a readable path into forty lines of noise, so
+    // attribute grouping is left to judgement here.
+    'vue/max-attributes-per-line': 'off',
   },
 })

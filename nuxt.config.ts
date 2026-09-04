@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     // guarantees crawlers and AI agents receive fully-formed markup.
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/it'],
+      routes: ['/', '/it', '/play', '/it/play'],
       failOnError: true,
     },
   },
