@@ -1,5 +1,64 @@
 {
-  "hero": {
-    "line": "Software and AI, built to last."
+  "site": {
+    "name": "Alessandro Luppi",
+    "role": "Software and AI engineer",
+    "title": "Alessandro Luppi — Software and AI engineer",
+    "description": "Alessandro Luppi builds full-stack software and AI-powered products, end to end. A short introduction, and a way to get in touch."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "home": "Home",
+    "language": "Language",
+    "switchTo": "Leggi in italiano"
+  },
+  "stage": {
+    "hero": {
+      "title": "Everything here is software.",
+      "sub": "Including what built it.",
+      "hint": "Scroll"
+    },
+    "screen": {
+      "line": "It starts here."
+    },
+    "ai": {
+      "title": "Working with AI",
+      "beats": {
+        "product": {
+          "label": "In the product",
+          "title": "AI people actually use",
+          "body": "Not a demo bolted to the side. AI built into features people rely on, and held to the same standard as everything around it."
+        },
+        "practice": {
+          "label": "In the work",
+          "title": "A faster way to build",
+          "body": "Agents in the daily loop: planning, writing, reviewing. The judgement stays human. The typing mostly doesn't."
+        },
+        "page": {
+          "label": "In front of you",
+          "title": "This page, for instance",
+          "body": "Designed, written and committed by an AI agent from a brief and a conversation, then reviewed line by line. You are looking at the output."
+        }
+      }
+    },
+    "craft": {
+      "label": "Full-stack",
+      "title": "The same care, whatever the shape.",
+      "body": "From the data model to the last pixel — web, mobile, and whatever else the product needs to become."
+    }
+  },
+  "contact": {
+    "title": "Let's talk.",
+    "body": "Ideas, problems, roles, or just something you're building. LinkedIn is the fastest way to reach me.",
+    "cta": "Connect on LinkedIn"
+  },
+  "egg": {
+    "title": "One more thing.",
+    "body": "You made it to the bottom. Now try being the model that has to guess who I am.",
+    "cta": "Play"
+  },
+  "footer": {
+    "built": "Built with Nuxt, written with an AI agent.",
+    "source": "Source on GitHub",
+    "rights": "All rights reserved."
   }
 }

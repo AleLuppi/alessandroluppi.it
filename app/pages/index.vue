@@ -1,9 +1,13 @@
 <script setup lang="ts">
-const { t } = useI18n()
+/**
+ * The landing page: one scroll-driven narrative, then the way to get in
+ * touch.
+ */
 </script>
 
 <template>
-  <main>
-    <h1>{{ t('hero.line') }}</h1>
-  </main>
+  <div>
+    <TheStage />
+    <ContactSection />
+  </div>
 </template>

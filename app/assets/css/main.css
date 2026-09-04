@@ -149,6 +149,58 @@ p {
   content: "";
 }
 
+/**
+ * Buttons. Two variants only: one solid call to action per view, and a quiet
+ * outline for everything secondary.
+ */
+.btn {
+  display: inline-flex;
+  gap: var(--sp-3);
+  align-items: center;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--r-pill);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition:
+    background-color var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out),
+    translate var(--t-fast) var(--ease-out);
+}
+
+.btn:hover {
+  translate: 0 -2px;
+}
+
+.btn--primary {
+  background: var(--c-accent);
+  color: var(--c-bg);
+}
+
+.btn--primary:hover {
+  background: var(--c-accent-soft);
+}
+
+.btn--ghost {
+  border: 1px solid var(--c-line-strong);
+  color: var(--c-text);
+}
+
+.btn--ghost:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent-soft);
+}
+
+/* The arrow travels a little further than the button on hover. */
+.btn__arrow {
+  transition: translate var(--t-base) var(--ease-out);
+}
+
+.btn:hover .btn__arrow {
+  translate: 3px 0;
+}
+
 /* --- Motion preferences ------------------------------------------------ */
 
 /**

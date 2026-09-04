@@ -1,5 +1,64 @@
 {
-  "hero": {
-    "line": "Software e AI, costruiti per durare."
+  "site": {
+    "name": "Alessandro Luppi",
+    "role": "Software e AI engineer",
+    "title": "Alessandro Luppi — Software e AI engineer",
+    "description": "Alessandro Luppi costruisce software full-stack e prodotti basati sull'AI, dall'inizio alla fine. Una breve presentazione, e un modo per mettersi in contatto."
+  },
+  "nav": {
+    "skip": "Vai al contenuto",
+    "home": "Home",
+    "language": "Lingua",
+    "switchTo": "Read in English"
+  },
+  "stage": {
+    "hero": {
+      "title": "Qui è tutto software.",
+      "sub": "Compreso ciò che l'ha costruito.",
+      "hint": "Scorri"
+    },
+    "screen": {
+      "line": "Tutto inizia qui."
+    },
+    "ai": {
+      "title": "Lavorare con l'AI",
+      "beats": {
+        "product": {
+          "label": "Nel prodotto",
+          "title": "AI che le persone usano davvero",
+          "body": "Non una demo attaccata di lato. AI dentro funzionalità su cui le persone contano, tenuta allo stesso standard di tutto il resto."
+        },
+        "practice": {
+          "label": "Nel lavoro",
+          "title": "Un modo più veloce di costruire",
+          "body": "Agenti nel flusso quotidiano: progettare, scrivere, revisionare. Il giudizio resta umano. La scrittura, quasi mai."
+        },
+        "page": {
+          "label": "Davanti a te",
+          "title": "Questa pagina, per esempio",
+          "body": "Progettata, scritta e committata da un agente AI a partire da un brief e una conversazione, poi revisionata riga per riga. Quello che vedi è il risultato."
+        }
+      }
+    },
+    "craft": {
+      "label": "Full-stack",
+      "title": "La stessa cura, in qualunque forma.",
+      "body": "Dal modello dati all'ultimo pixel — web, mobile, e qualunque cosa il prodotto debba diventare."
+    }
+  },
+  "contact": {
+    "title": "Parliamone.",
+    "body": "Idee, problemi, ruoli, o semplicemente qualcosa che stai costruendo. LinkedIn è il modo più rapido per raggiungermi.",
+    "cta": "Connettiti su LinkedIn"
+  },
+  "egg": {
+    "title": "Un'ultima cosa.",
+    "body": "Sei arrivato in fondo. Ora prova a essere il modello che deve indovinare chi sono.",
+    "cta": "Gioca"
+  },
+  "footer": {
+    "built": "Costruito con Nuxt, scritto con un agente AI.",
+    "source": "Codice su GitHub",
+    "rights": "Tutti i diritti riservati."
   }
 }
