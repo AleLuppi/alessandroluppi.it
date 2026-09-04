@@ -1,0 +1,12 @@
+# Dependencies allowed to run install scripts. Both fetch or link a
+# platform-specific native binary and cannot work without it; everything else
+# stays blocked by pnpm's default.
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+
+# pnpm withholds freshly published versions for a cooling-off period as a
+# supply-chain precaution. This one was requested explicitly and is a
+# lint-only dev dependency, so it is opted out knowingly.
+minimumReleaseAgeExclude:
+  - eslint@10.10.0
