@@ -1,5 +1,39 @@
 // Nuxt configuration.
 // See https://nuxt.com/docs/api/configuration/nuxt-config
+
+const isProduction = process.env.NODE_ENV === 'production'
+
+/**
+ * Response headers applied to every route.
+ *
+ * The content policy is tight everywhere it can be. `script-src` has to
+ * allow inline code because Nuxt embeds the hydration payload and an import
+ * map directly in the prerendered HTML; the directives that cost nothing to
+ * keep strict - framing, base URI, form targets, object embedding - stay
+ * strict, and this site takes no user input for an injected script to reach.
+ */
+const SECURITY_HEADERS = isProduction
+  ? {
+      'content-security-policy': [
+        "default-src 'self'",
+        "script-src 'self' 'unsafe-inline'",
+        "style-src 'self' 'unsafe-inline'",
+        "img-src 'self' data:",
+        "font-src 'self'",
+        "connect-src 'self'",
+        "object-src 'none'",
+        "base-uri 'self'",
+        "form-action 'none'",
+        "frame-ancestors 'none'",
+        'upgrade-insecure-requests',
+      ].join('; '),
+      'x-content-type-options': 'nosniff',
+      'referrer-policy': 'strict-origin-when-cross-origin',
+      'permissions-policy': 'camera=(), microphone=(), geolocation=(), payment=()',
+      'strict-transport-security': 'max-age=63072000; includeSubDomains; preload',
+    }
+  : {}
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -25,9 +59,17 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
-  // Long-lived immutable caching for build assets; HTML stays revalidated so
-  // content updates go live on the next deploy without a stale window.
   routeRules: {
+    // Security headers on every response. Applied through route rules rather
+    // than vercel.json so they survive a move to any other host.
+    //
+    // Skipped in development: `connect-src 'self'` would block Vite's HMR
+    // websocket, and a policy that only holds in production is worse than
+    // one that is explicitly not applied there.
+    '/**': { headers: SECURITY_HEADERS },
+
+    // Build assets are content-hashed, so they can be cached forever. HTML
+    // stays revalidated, which lets a deploy go live with no stale window.
     '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
     '/_fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
   },

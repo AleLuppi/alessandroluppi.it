@@ -12,5 +12,10 @@ export default withNuxt({
     // separate lines turns a readable path into forty lines of noise, so
     // attribute grouping is left to judgement here.
     'vue/max-attributes-per-line': 'off',
+
+    // Single quotes, except where the string itself contains one. CSP
+    // directives are full of `'self'` and reading them through a hedge of
+    // backslashes helps nobody.
+    '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
   },
 })
