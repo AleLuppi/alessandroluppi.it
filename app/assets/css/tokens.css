@@ -1,0 +1,97 @@
+/**
+ * Design tokens.
+ *
+ * Everything visual in the site resolves to a value declared here, so the
+ * whole look can be retuned from one file. Values are intentionally few:
+ * one accent, one support colour, and a fluid type scale that needs no
+ * breakpoints to stay readable between 320px and 2560px.
+ */
+
+:root {
+  /* --- Surfaces -------------------------------------------------------- */
+  /* Near-black with a slight blue cast: reads as "screen" rather than "ink",
+     and keeps device bezels visible without a hard border. */
+  --c-bg: #07080b;
+  --c-bg-elev: #0e1016;
+  --c-bg-elev-2: #161a23;
+  --c-bg-inset: #040507;
+
+  /* --- Lines ----------------------------------------------------------- */
+  --c-line: rgb(255 255 255 / 9%);
+  --c-line-strong: rgb(255 255 255 / 18%);
+
+  /* --- Text ------------------------------------------------------------ */
+  --c-text: #f2f4f8;
+  --c-text-dim: #9aa2b1;
+  --c-text-mute: #6b7382;
+
+  /* --- Accent ---------------------------------------------------------- */
+  /* A single electric blue carries every interactive and "signal" state.
+     The violet is support only: it exists to give flow lines depth when the
+     two are used as a gradient. */
+  --c-accent: #4c8dff;
+  --c-accent-soft: #86b0ff;
+  --c-accent-2: #9d7bff;
+  --c-glow: rgb(76 141 255 / 45%);
+  --c-glow-soft: rgb(76 141 255 / 12%);
+  --g-signal: linear-gradient(90deg, var(--c-accent) 0%, var(--c-accent-2) 100%);
+
+  /* --- Typography ------------------------------------------------------ */
+  --ff-sans: Inter, system-ui, -apple-system, "Segoe UI", roboto, sans-serif;
+  --ff-mono: ui-monospace, sfmono-regular, "SF Mono", menlo, consolas, monospace;
+
+  /* Fluid scale. Each step interpolates on viewport width, so there is no
+     step change at a breakpoint and no line ever gets orphaned on mobile. */
+  --fs-display: clamp(2.75rem, 10vw, 8rem);
+  --fs-h1: clamp(2.1rem, 6.5vw, 4.5rem);
+  --fs-h2: clamp(1.65rem, 4.4vw, 3rem);
+  --fs-h3: clamp(1.15rem, 2.4vw, 1.75rem);
+  --fs-body: clamp(1rem, 1.15vw, 1.1875rem);
+  --fs-small: 0.9375rem;
+  --fs-micro: 0.8125rem;
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.16;
+  --lh-body: 1.6;
+
+  --tr-display: -0.04em;
+  --tr-heading: -0.025em;
+  --tr-label: 0.14em;
+
+  /* --- Space ----------------------------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  --measure: 34rem;
+  --shell: min(100% - 2.5rem, 76rem);
+
+  /* --- Radii ----------------------------------------------------------- */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  /* --- Motion ---------------------------------------------------------- */
+  /* Quint-out is the house curve: it decelerates late, which is what makes
+     scroll-linked movement feel weighted rather than linear. */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast: 160ms;
+  --t-base: 280ms;
+  --t-slow: 560ms;
+
+  /* --- Layers ---------------------------------------------------------- */
+  --z-stage: 1;
+  --z-overlay: 10;
+  --z-nav: 20;
+  --z-modal: 30;
+}
