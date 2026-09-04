@@ -36,7 +36,7 @@ useSeoMeta({
 
 <style scoped>
 .play {
-  padding-block: clamp(5rem, 12svh, 8rem) var(--sp-8);
+  padding-block: clamp(3.5rem, 12svh, 8rem) var(--sp-8);
 }
 
 .play__title {

@@ -240,6 +240,22 @@ function restart(): void {
   max-width: 11rem;
 }
 
+/**
+ * On a phone the figure sits above the choices, so every pixel it takes is a
+ * pixel of the game pushed below the fold. Shrink it there: it still has to
+ * be visible while picking, since watching it get dressed wrongly is the
+ * joke, but it does not need to be large to do that.
+ */
+@media (width < 56rem) {
+  .game__figure {
+    padding: var(--sp-4);
+  }
+
+  .game__figure :deep(.avatar) {
+    max-width: 7rem;
+  }
+}
+
 .figure__caption {
   margin-top: var(--sp-4);
   color: var(--c-text-dim);
