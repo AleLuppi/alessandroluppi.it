@@ -25,11 +25,11 @@
   "dependencies": {
     "@nuxt/fonts": "^0.14.0",
     "@nuxtjs/i18n": "^10.6.0",
-    "@nuxtjs/robots": "^6.2.0",
-    "@nuxtjs/sitemap": "^8.5.0",
+    "@nuxtjs/robots": "^6.2.3",
+    "@nuxtjs/sitemap": "^8.5.1",
     "nuxt": "^4.5.2",
-    "nuxt-schema-org": "^6.3.1",
-    "vue": "^3.5.42",
+    "nuxt-schema-org": "^6.3.2",
+    "vue": "^3.5.43",
     "vue-router": "^5.3.1"
   },
   "devDependencies": {
