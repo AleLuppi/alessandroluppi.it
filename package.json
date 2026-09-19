@@ -15,6 +15,8 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "deploy": "pnpm generate && pnpm dlx firebase-tools deploy --only hosting",
+    "emulate": "pnpm generate && pnpm dlx firebase-tools emulators:start --only hosting",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

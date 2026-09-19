@@ -35,3 +35,32 @@ jobs:
       # Prerendering is configured to fail on error, so this also proves
       # every route in the sitemap actually resolves.
       - run: pnpm generate
+
+  deploy:
+    name: Deploy to Firebase Hosting
+    # Never ships anything the checks have not passed first.
+    needs: check
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Built here rather than through a firebase.json predeploy hook, so the
+      # build that ships is the one this job can show you the log for.
+      - run: pnpm generate
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: ${{ vars.FIREBASE_PROJECT_ID }}
+          channelId: live

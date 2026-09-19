@@ -15,7 +15,7 @@ sends anyone who wants more to LinkedIn.
 | i18n | [@nuxtjs/i18n](https://i18n.nuxtjs.org) | English at `/`, Italian at `/it`, with hreflang handled for us |
 | Styling | Plain CSS with custom properties | The animation is bespoke; utilities would add weight without leverage |
 | Fonts | [@nuxt/fonts](https://fonts.nuxt.com) | Self-hosts Inter: no third-party request, no webfont layout shift |
-| Hosting | [Vercel](https://vercel.com) | Static output served from the CDN |
+| Hosting | [Firebase Hosting](https://firebase.google.com/docs/hosting) | Static output served from Google's CDN |
 
 There is no animation library. The scroll narrative is about 200 lines of
 CSS driven by a handful of numbers — see below.
@@ -34,6 +34,8 @@ pnpm dev
 | `pnpm dev` | Development server on `localhost:3000` |
 | `pnpm generate` | Prerender every route to `.output/public` |
 | `pnpm preview` | Serve the generated output locally |
+| `pnpm deploy` | Build and ship to Firebase Hosting |
+| `pnpm emulate` | Build and serve through the Firebase emulator |
 | `pnpm lint` | ESLint over the whole project (`lint:fix` to autofix) |
 | `pnpm typecheck` | Type-check without emitting |
 
@@ -127,13 +129,39 @@ installed on every `pnpm install` to serve a task that runs once a year.
 
 ## Deploying
 
-Vercel builds from `vercel.json`: `pnpm install --frozen-lockfile` then
-`pnpm build`. Only `main` produces a production deployment.
+Firebase Hosting serves the prerendered output straight from its CDN. There
+are no Cloud Functions and nothing runs per request.
 
-Security headers and cache policy are declared as `routeRules` in
-`nuxt.config.ts` rather than in `vercel.json`, so they travel with the app
-if it ever moves host. The content security policy applies in production
-only — in development `connect-src 'self'` would block Vite's HMR socket.
+One-time setup:
+
+```bash
+pnpm dlx firebase-tools login
+pnpm dlx firebase-tools use --add
+```
+
+The second command writes `.firebaserc`, which is gitignored: the target
+project is environment-specific and does not belong in a public repository.
+After that, `pnpm deploy` builds and ships.
+
+Pushes to `main` deploy automatically through GitHub Actions, and only after
+lint, types and the build have passed. That job needs two repository
+settings:
+
+- Secret `FIREBASE_SERVICE_ACCOUNT` — service account JSON with the Firebase
+  Hosting Admin role.
+- Variable `FIREBASE_PROJECT_ID` — the project to deploy to.
+
+Headers and caching live in `firebase.json`, not in `nuxt.config.ts`.
+Firebase serves static files from its CDN and never sees Nitro's route
+rules, so declaring them in Nuxt would be configuration that silently does
+nothing. `cleanUrls` and `trailingSlash: false` keep exactly one canonical
+URL per page: `/index.html` redirects to `/`, and `/it/` redirects to `/it`.
+
+`pnpm emulate` serves the built site through the Firebase emulator with the
+real header rules applied. It is worth using before any change to
+`firebase.json`, and worth using generally: a static host serves files that
+`nuxt dev` and `nuxt preview` generate on the fly instead, so the two can
+disagree.
 
 ## Notes
 

@@ -37,4 +37,7 @@ pnpm-debug.log*
 Thumbs.db
 
 # Deployment
-.vercel
+# .firebaserc holds the target project id, which is environment-specific;
+# create it once with `firebase use --add`.
+.firebase
+.firebaserc
