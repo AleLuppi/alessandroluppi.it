@@ -118,11 +118,6 @@ export default defineNuxtConfig({
       { code: 'it', language: 'it-IT', name: 'Italiano', file: 'it.json', dir: 'ltr' },
     ],
     baseUrl: 'https://alessandroluppi.it',
-    bundle: {
-      // Messages are compiled to functions at build time, so the runtime
-      // message compiler is dead weight in the client bundle.
-      dropMessageCompiler: true,
-    },
     // Only the root path negotiates language, so shared deep links always
     // resolve to the language they were shared in.
     detectBrowserLanguage: {
