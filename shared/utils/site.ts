@@ -12,5 +12,4 @@ export const SITE_URL = 'https://alessandroluppi.it'
 
 export const SITE_LINKS = {
   linkedin: 'https://www.linkedin.com/in/alessandro-luppi/',
-  github: 'https://github.com/AleLuppi/alessandroluppi.it',
 } as const

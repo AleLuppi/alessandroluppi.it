@@ -57,6 +57,5 @@ ${contact.body} There is no contact form and no published email address, so Link
 - Content is prerendered to static HTML, so no JavaScript execution is
   needed to read anything here. The scroll animation is decoration layered
   over a plain document.
-- Source code: ${SITE_LINKS.github}
 `
 })

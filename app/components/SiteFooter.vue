@@ -10,12 +10,6 @@ const year = new Date().getFullYear()
       <p class="footer__built">
         {{ t('footer.built') }}
       </p>
-      <a
-        :href="SITE_LINKS.github"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="footer__link"
-      >{{ t('footer.source') }}</a>
     </div>
   </footer>
 </template>
