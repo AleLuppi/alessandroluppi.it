@@ -51,81 +51,9 @@
     "body": "Idee, problemi, ruoli, o semplicemente qualcosa che stai costruendo. LinkedIn è il modo più rapido per raggiungermi.",
     "cta": "Connettiti su LinkedIn"
   },
-  "egg": {
-    "title": "Un'ultima cosa.",
-    "body": "Sei arrivato in fondo. Ora prova a essere il modello che deve indovinare chi sono.",
-    "cta": "Gioca"
-  },
   "footer": {
     "built": "Costruito con Nuxt, scritto con un agente AI.",
     "source": "Codice su GitHub",
     "rights": "Tutti i diritti riservati."
-  },
-  "game": {
-    "label": "Easter egg",
-    "title": "Il modello sei tu.",
-    "intro": "Cinque frasi, a ognuna manca l'ultimo token. Scegli quello che viene dopo. Le percentuali sono quelle che darebbe un predittore ingenuo — seguirle è esattamente il modo in cui un modello sbaglia con sicurezza. Quello che scegli veste anche il personaggio qui accanto.",
-    "progress": "Token {current} di {total}",
-    "right": "Corrisponde",
-    "wrong": "Fuori distribuzione",
-    "next": "Token successivo",
-    "finish": "Vedi il risultato",
-    "replay": "Rigioca",
-    "backHome": "Torna alla pagina",
-    "rounds": {
-      "job": {
-        "prompt": "Di giorno, Alessandro fa il",
-        "choices": {
-          "engineer": "software engineer",
-          "pastry": "pasticcere",
-          "welder": "saldatore subacqueo"
-        },
-        "reveal": "Software engineer. Full-stack, che poi vuol dire essere quello che scopre perché si è rotto in produzione."
-      },
-      "hands": {
-        "prompt": "Tra le mani, quasi ogni giorno:",
-        "choices": {
-          "keyboard": "una tastiera",
-          "rollingPin": "un mattarello",
-          "blowtorch": "una fiamma ossidrica"
-        },
-        "reveal": "Una tastiera — anche se una fetta crescente della scrittura ormai la delega a un agente."
-      },
-      "head": {
-        "prompt": "In testa, mentre lavora:",
-        "choices": {
-          "headphones": "delle cuffie",
-          "toque": "un cappello da chef",
-          "helmet": "un casco da palombaro"
-        },
-        "reveal": "Cuffie. L'unico modo affidabile per far convivere un compilatore e un open space."
-      },
-      "badge": {
-        "prompt": "Se avesse un badge, ci sarebbe scritto:",
-        "choices": {
-          "shipsIt": "ships it",
-          "alDente": "al dente",
-          "depth": "12 atmosfere"
-        },
-        "reveal": "Ships it. La qualità è quella che sopravvive all'incontro con gli utenti veri, non quella che sta bene in una demo."
-      },
-      "face": {
-        "prompt": "La sua faccia quando la build passa al primo colpo:",
-        "choices": {
-          "disbelief": "lieve incredulità",
-          "serene": "serena accettazione",
-          "bubbles": "fa le bolle"
-        },
-        "reveal": "Lieve incredulità, seguita subito dal controllare se i test siano davvero girati."
-      }
-    },
-    "result": {
-      "label": "Inferenza completata",
-      "caption": "La tua previsione, assemblata.",
-      "score": "{score} token su {total} indovinati.",
-      "body": "Hai appena fatto quello che fa un modello: cinque ipotesi a partire da un prior e da una sensazione. Che è poi il modo in cui è stata scritta tutta questa pagina — un agente che prevede il token successivo, e una persona che decide quali previsioni tenere."
-    },
-    "metaTitle": "Gioca — Alessandro Luppi",
-    "metaDescription": "Un piccolo gioco in cui fai tu il modello linguistico e prevedi cosa viene dopo, scoprendo qualcosa su Alessandro Luppi lungo la strada."
   }
 }

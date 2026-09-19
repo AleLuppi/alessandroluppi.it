@@ -51,81 +51,9 @@
     "body": "Ideas, problems, roles, or just something you're building. LinkedIn is the fastest way to reach me.",
     "cta": "Connect on LinkedIn"
   },
-  "egg": {
-    "title": "One more thing.",
-    "body": "You made it to the bottom. Now try being the model that has to guess who I am.",
-    "cta": "Play"
-  },
   "footer": {
     "built": "Built with Nuxt, written with an AI agent.",
     "source": "Source on GitHub",
     "rights": "All rights reserved."
-  },
-  "game": {
-    "label": "Easter egg",
-    "title": "You are the model.",
-    "intro": "Five sentences, each missing its last token. Pick what comes next. The percentages are what a naive predictor would guess — following them is exactly how a model gets a confident answer wrong. Whatever you pick also dresses the figure beside you.",
-    "progress": "Token {current} of {total}",
-    "right": "Matched",
-    "wrong": "Off distribution",
-    "next": "Next token",
-    "finish": "See the result",
-    "replay": "Run it again",
-    "backHome": "Back to the page",
-    "rounds": {
-      "job": {
-        "prompt": "By day, Alessandro is a",
-        "choices": {
-          "engineer": "software engineer",
-          "pastry": "pastry chef",
-          "welder": "deep-sea welder"
-        },
-        "reveal": "Software engineer. Full-stack, which mostly means being the person who finds out why it broke in production."
-      },
-      "hands": {
-        "prompt": "In his hands, most days:",
-        "choices": {
-          "keyboard": "a keyboard",
-          "rollingPin": "a rolling pin",
-          "blowtorch": "a blowtorch"
-        },
-        "reveal": "A keyboard — though a growing share of the typing now gets delegated to an agent."
-      },
-      "head": {
-        "prompt": "On his head, while working:",
-        "choices": {
-          "headphones": "headphones",
-          "toque": "a chef's toque",
-          "helmet": "a diving helmet"
-        },
-        "reveal": "Headphones. The only reliable way to make a compiler and an open-plan office coexist."
-      },
-      "badge": {
-        "prompt": "If he wore a badge, it would read:",
-        "choices": {
-          "shipsIt": "ships it",
-          "alDente": "al dente",
-          "depth": "12 atmospheres"
-        },
-        "reveal": "Ships it. Quality is what survives contact with real users, not what looks good in a demo."
-      },
-      "face": {
-        "prompt": "His face when the build passes first try:",
-        "choices": {
-          "disbelief": "mild disbelief",
-          "serene": "serene acceptance",
-          "bubbles": "blowing bubbles"
-        },
-        "reveal": "Mild disbelief, followed immediately by checking whether the tests actually ran."
-      }
-    },
-    "result": {
-      "label": "Inference complete",
-      "caption": "Your prediction, assembled.",
-      "score": "{score} of {total} tokens matched.",
-      "body": "You just did what a model does: five guesses from a prior and a vibe. Which is roughly how this whole page got written — an agent predicting the next token, and a human deciding which predictions to keep."
-    },
-    "metaTitle": "Play — Alessandro Luppi",
-    "metaDescription": "A short game where you play the language model and predict what comes next, and find out a little about Alessandro Luppi along the way."
   }
 }

@@ -13,7 +13,7 @@ import en from '../../i18n/locales/en.json'
  * from, so the summary cannot fall out of step with what a visitor is told.
  */
 
-const { site, stage, contact, game } = en
+const { site, stage, contact } = en
 const beats = stage.ai.beats
 
 export default defineEventHandler((event) => {
@@ -42,8 +42,6 @@ Published in English and Italian, with identical content in both.
 
 - [Home, English](${SITE_URL}/): the full narrative, from the opening line to the contact call to action.
 - [Home, Italian](${SITE_URL}/it): the same page in Italian.
-- [Play, English](${SITE_URL}/play): ${game.metaDescription}
-- [Play, Italian](${SITE_URL}/it/play): the same game in Italian.
 
 ## Contact
 

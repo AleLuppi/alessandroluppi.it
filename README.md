@@ -1,7 +1,7 @@
 # alessandroluppi.it
 
 Personal site of Alessandro Luppi — a single scroll-driven landing page in
-English and Italian, plus a small game hidden at the bottom of it.
+English and Italian.
 
 It is deliberately a teaser rather than a CV: it says what I work on and
 sends anyone who wants more to LinkedIn.
@@ -41,10 +41,10 @@ pnpm dev
 
 ```text
 app/
-  components/     TheStage and its devices, the game, site chrome
+  components/     TheStage and its devices, site chrome
   composables/    useScrollStage, useReducedMotion
-  pages/          index (landing), play (the game)
-  utils/          motion helpers, game round data
+  pages/          index (the landing page)
+  utils/          motion helpers
   assets/css/     design tokens and global styles
 i18n/locales/     en.json, it.json — all user-facing copy
 shared/utils/     constants used by both the app and server routes
@@ -87,11 +87,6 @@ composition rests before the pin releases.
 All user-facing text lives in `i18n/locales/en.json` and
 `i18n/locales/it.json`. Both files must have the same shape — a key present
 in one and missing from the other will fall back rather than fail loudly.
-
-The game's structure is separate from its words: rounds, probabilities and
-the character slot each round fills are in `app/utils/game.ts`, while the
-prompts, candidate labels and reveals are in the locale files under `game`.
-Adding a round means adding an entry in both places.
 
 `/llms.txt` is generated from `en.json` at build time, so the machine-
 readable summary cannot drift from what visitors are told. It has no copy of
